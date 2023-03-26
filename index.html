@@ -1,0 +1,133 @@
+<html>
+    <head>
+      
+    </head>
+    <body style="background-color: rgb(47, 158, 195);">
+    
+<center><h3 style="background-color: blue; color: white; width: fit-content;">Use this sequence with your corresponding value</h3></center>
+                <div style="display: flex;">
+                    <div style="flex: 1; padding: 10px;"><b>Gender</b><br>Female = 0<br>Male = 1</div>
+                    <div style="flex: 1; padding: 10px;"><b>Education_Level</b><br>College = 0<br>
+                        Doctorate = 1<br>
+                        Graduate = 2<br>
+                        High School = 3<br>
+                        Post-Graduate = 4<br>
+                        Uneducated = 5<br>
+                        Unknown = 6</div>
+                    <div style="flex: 1; padding: 10px;"><b>Marital_Status</b><br>
+                        Divorced = 0<br>
+                        Married = 1<br>
+                        Single = 2<br>
+                        Unknown = 3</div>
+                    <div style="flex: 1; padding: 10px;"><b>Income_Category</b><br>
+                        $120K + = 0<br>
+                        $40K - $60K = 1<br>
+                        $60K - $80K = 2<br>
+                        $80K - $120K = 3<br>
+                        Less than $40K = 4<br>
+                        Unknown = 5</div>
+                    <div style="flex: 1; padding: 10px;"><b>Card_Category</b><br>
+                        Blue = 0<br>
+                        Gold = 1<br>
+                        Platinum = 2<br>
+                        Silver = 3</div>
+                    
+                  </div>
+                  <hr>
+                  <center><h2 style="background-color: blue; color: white; border: 5px; width: fit-content;">Please Fill the Form</h2></center>
+
+
+                  <style>
+                    
+                    .container {
+                      display: flex;
+                      flex-direction: row;
+                      align-items: center;
+                      justify-content: space-between;
+                      width: 100vw;
+                      height: 100vh;
+                    }
+                    
+                    .col {
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      width: 45%;
+                      height: 100%;
+                    }
+                    
+                    label {
+                      width: 50%;
+                      margin: 5px 0;
+                    }
+                    
+                    input {
+                      width: 60%;
+                      height: 30px;
+                      padding: 1px;
+                      font-size: 16px;
+                    }
+                    button {
+    width: 30%;
+    height: 40px;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #25a429;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+                    }
+                  </style>
+                <form method="POST" action="{{ url_for('churn_prediction') }}">
+                  <div class="container">
+                    <div class="col">
+                      <label for="Customer_Age">Customer_Age</label>
+                      <input type="number" id="Customer_Age" name="customerage" required>
+
+                      <label for="Gender">Gender</label>
+                      <input type="number" id="Gender" name="gender" required>
+
+                      <label for="Dependent_count">Dependent_count</label>
+                      <input type="number" id="Dependent_count" name="dependent" required>
+
+                      <label for="Education_Level">Education_Level</label>
+                      <input type="number" id="Education_Level" name="education" required>
+
+                      <label for="Marital_Status">Marital_Status</label>
+                      <input type="number" id="Marital_Status" name="marital" required>
+
+                      <label for="Income_Category">Income_Category</label>
+                      <input type="number" id="Income_Category" name="income" required>
+                    </div>
+                    <div class="col">
+                      <label for="Card_Category">Card_Category</label>
+                      <input type="number" id="Card_Category" name="card" required>
+
+                      <label for="Months_on_book">Months_on_book</label>
+                      <input type="number" id="Months_on_book" name="months" required>
+
+                      <label for="Total_Relationship_Count">Total_Relationship_Count</label>
+                      <input type="number" id="Total_Relationship_Count" name="relationship" required>
+
+                      <label for="Months_Inactive_12_mon">Months_Inactive_12_mon</label>
+                      <input type="number" id="Months_Inactive_12_mon" name="monthsin" required>
+
+                      <label for="Contacts_Count_12_mon">Contacts_Count_12_mon</label>
+                      <input type="number" id="Contacts_Count_12_mon" name="contacts" required>
+
+                      <label for="Credit_Limit">Credit_Limit</label>
+                      <input type="number" id="Credit_Limit" name="credit" required>
+                    </div>
+                   
+                  </form>
+                  <div style="display: flex; justify-content: center; width: 100vw;">
+                    <button>Predict</button>
+                  </div>
+                  
+                  
+                  
+
+
+    </body>
+</html>
